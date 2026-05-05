@@ -16,7 +16,7 @@ chief.use(express.json());
 chief.use(express.urlencoded({ extended: true }));
 chief.use(cookieParser())
 chief.use(cors({
-    origin:["http://localhost:5173","http://localhost:5174"],
+    origin:["http://localhost:5173","https://frontend-zb5q.vercel.app/"],
     methods:["GET","POST","PUT","DELETE"],
 credentials:true
 }))
