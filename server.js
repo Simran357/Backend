@@ -17,8 +17,6 @@ chief.use(express.urlencoded({ extended: true }));
 chief.use(cookieParser())
 chief.use(cors({
     origin:["*"],
-    methods:["GET","POST","PUT","DELETE"],
-credentials:true
 }))
 
 chief.use(routes)
