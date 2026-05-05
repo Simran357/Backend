@@ -15,9 +15,7 @@ chief.use(express.json());
 
 chief.use(express.urlencoded({ extended: true }));
 chief.use(cookieParser())
-chief.use(cors({
-    origin:["*"],
-}))
+chief.use(cors())
 
 chief.use(routes)
 mongoose.connect(process.env.MONGO_URI)
