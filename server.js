@@ -15,8 +15,14 @@ chief.use(express.json());
 
 chief.use(express.urlencoded({ extended: true }));
 chief.use(cookieParser())
-chief.use(cors())
-
+chief.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://your-frontend.vercel.app"
+  ],
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 chief.use(routes)
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
