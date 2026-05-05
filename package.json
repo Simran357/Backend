@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "this is smartpharma backend",
+  "license": "ISC",
+  "author": "simran",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google-cloud/vision": "^5.3.5",
+    "axios": "^1.13.5",
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.9.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "joi": "^18.0.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.4.1",
+    "multer": "^2.1.1",
+    "nodemailer": "^8.0.6",
+    "openai": "^6.33.0",
+    "sharp": "^0.34.5",
+    "stripe": "^22.0.0",
+    "tesseract.js": "^7.0.0"
+  }
+}
