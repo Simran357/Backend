@@ -18,10 +18,11 @@ chief.use(cookieParser())
 chief.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://your-frontend.vercel.app"
+    "https://frontend-zb5q.vercel.app"
   ],
   credentials: true,
-  allowedHeaders: ["Content-Type", "Authorization"]
+  allowedHeaders: ["Content-Type", "Authorization"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 }));
 chief.use(routes)
 mongoose.connect(process.env.MONGO_URI)
