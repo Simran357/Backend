@@ -45,7 +45,7 @@ const createNewUser = async (req, res, next) => {
         console.log(" eh error try di crate user de tym te ", error)
         res.status(500).json({
             success: false,
-            message: error.message
+            message:" error message in create user controller"
         })
     }
 
@@ -83,7 +83,7 @@ const getUsers = async (req, res, next) => {
     try {
         const users = await getUserModel.find()
         //   console.log("users in get user controller", users)
-        res.json({
+        res.status(200).json({
             success: true,
             data: users
         });
@@ -91,7 +91,7 @@ const getUsers = async (req, res, next) => {
         console.log("error in get user controller")
         res.status(500).json({
             success: false,
-            message: error.message
+            message:" error in get user controller"
         });
     }
 }
@@ -107,7 +107,7 @@ const updateRoleController = async (req, res, next) => {
             { role },
             { new: true }
         )
-        res.json({
+        res.status(200).json({
             success: true,
             message: "Role updated successfully",
             data: updatedUser
