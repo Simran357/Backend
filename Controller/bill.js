@@ -50,8 +50,8 @@ const stripePayment = async (req, res, next) => {
       ],
 
       // ✅ IMPORTANT FIX (NO NESTED ROUTE)
-      success_url: "http://localhost:5173/OrderSuccess",
-      cancel_url: "http://localhost:5173/Cart",
+      success_url: "https://frontend-zb5q.vercel.app/OrderSuccess",
+      cancel_url: "https://frontend-zb5q.vercel.app/Cart",
 
       // ✅ Optional (useful later)
       metadata: {
